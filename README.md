@@ -41,6 +41,7 @@ In `config/environment.js` you can specify:
 - optional exclude parameter, which prevents inclusion of the google maps api script tag into the index.html (in case one wants to handle loading of google maps lib by himself),
 - optional language for map localization,
 - optional explicit protocol setting.
+- optional async fetch the google maps script asynchronously.
 
 ```javascript
 ENV['g-map'] = {
@@ -51,7 +52,8 @@ ENV['g-map'] = {
   channel: 'my-google-map-api-channel',
   version: '3.26',
   language: 'ru',
-  protocol: 'https'
+  protocol: 'https',
+  async: true
 }
 ```
 

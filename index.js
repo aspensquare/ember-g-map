@@ -52,8 +52,10 @@ module.exports = {
         src = protocol + ':' + src;
       }
 
+      var async = gMapConfig.async || false;
+
       src += '?' + params.join('&');
-      content = '<script type="text/javascript" src="' + src + '"></script>';
+      content = '<script type="text/javascript" src="' + src + '"' + (async ? ' async' : '') + '></script>';
 
       var exclude = gMapConfig.exclude;
       if (exclude) {
